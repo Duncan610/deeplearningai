@@ -1,0 +1,57 @@
+# Data Architecture
+Data Architecture - design of systems to support the evolving data needs of an enterprise, achieved by flexible and 
+reversible decisions reached through a careful evaluation of trade-offs
+
+## Enterprise - design of systems to support change in an enterprise
+-- Business - product or service strategy and business model
+-- Application - structure and interaction of key applications
+-- Technical - interaction of software and hardware components
+-- Data - supporting the evolving data needs
+
+Reversible decisions are key, i.e.:
+-- One-way door decisions - irreversible decisions
+-- Two-way door decisions - reversible decisions (eg storing data in s3 and changing the tier 
+                            according to the business needs and frequency of the data usage)
+
+## Conway's Law
+Any organization that designs a system will produce a design whose structure is a copy of the
+organization's communication structure - You need to understand the communication structure that
+matches the company's communication channel
+
+## Principles of good data architecture
+
+## How data architecture impacts other teams and individuals
+-- Choose common components wisely
+-- Architecture is leadership
+
+## Data architecture is an ongoing process
+-- Always be architecting
+-- Build loosely coupled systems (Makes sure there are reversible processes)
+-- Make reversible changes
+
+## Unspoken but understood priorities
+-- Plan for failure (
+          Availability - The percentage of time an IT service or a component is 
+                          expected to be in an operable state.
+          Reliability -  Probability of a particular service or component performing as intended
+                         function during a particular time interval
+          Durability -  The ability of a storage system to withstand data loss during a hardware failure,
+                        software errors, or a natural disaster.
+)
+
+-- Prioritize security: principle of least privilege
+                        Zero trust security
+-- Architect for scalability:
+   large unforeseen costs
+   when to consider EC2 instances and not spot instances and vice versa
+-- Embrace FinOps
+  - Pay-as-you-go models(makes spending more dynamic and is a challenge for engineers): 
+      Some companies operate on a pay-as-you-go model, and others
+      cost per processing capacity model
+  - Readily Scalable - you can scale up for high performance or scale down to save money
+
+## Batch Architectures
+Traditional approach - data collected over a fixed period of time and not suitable for real time analysis
+
+
+
